@@ -1,0 +1,17 @@
+rvm:
+  - 1.9.3
+  - 2.0.0
+gemfile:
+  - gemfiles/chef-11.0.0.gemfile
+  - gemfiles/chef-11.2.0.gemfile
+  - gemfiles/chef-11.4.4.gemfile
+  - gemfiles/chef-11.6.0.gemfile
+  - gemfiles/chef-11.8.0.gemfile
+matrix:
+  exclude:
+    - rvm: 2.0.0
+      gemfile: gemfiles/chef-11.0.0.gemfile
+    - rvm: 2.0.0
+      gemfile: gemfiles/chef-11.2.0.gemfile
+    - rvm: 2.0.0
+      gemfile: gemfiles/chef-11.4.4.gemfile
