@@ -1,13 +1,11 @@
-Knife Spec
-==========
-[![Gem Version](https://badge.fury.io/rb/knife-spec.png)](http://badge.fury.io/rb/knife-spec)
-[![Build Status](https://travis-ci.org/sethvargo/knife-spec.png?branch=master)](https://travis-ci.org/sethvargo/knife-spec)
+# Knife Spec
+
+[![Gem Version](https://badge.fury.io/rb/knife-spec.svg)](http://badge.fury.io/rb/knife-spec) [![Build Status](https://travis-ci.org/sethvargo/knife-spec.svg?branch=master)](https://travis-ci.org/sethvargo/knife-spec)
 
 knife-spec is a knife plugin that automatically generates Chef cookbook specs (tests) stubs when you create a new cookbook with knife.
 
+## Installation
 
-Installation
-------------
 Add this line to your cookbook's `Gemfile`:
 
 ```ruby
@@ -16,31 +14,34 @@ gem 'knife-spec'
 
 And then execute:
 
-    $ bundle
+```
+$ bundle
+```
 
 Or install it yourself as:
 
-    $ gem install knife-spec
+```
+$ gem install knife-spec
+```
 
+## Usage
 
-Usage
------
 There are no usage instructions! Simply having knife-spec installed will automatically hook into Chef's default `cookbook_create` process to generate ChefSpec tests.
 
-    $ knife cookbook create COOKBOOK
+```
+$ knife cookbook create COOKBOOK
+```
 
+## Contributing
 
-Contributing
-------------
 1. Fork it
 2. Create your feature branch (`git checkout -b my-new-feature`)
 3. Commit your changes (`git commit -am 'Add some feature'`)
 4. Push to the branch (`git push origin my-new-feature`)
 5. Create new Pull Request
 
+## License & Authors
 
-License & Authors
------------------
 - Author: Seth Vargo (sethvargo@gmail.com)
 
 ```text
