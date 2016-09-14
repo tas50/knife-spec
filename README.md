@@ -4,6 +4,10 @@
 
 knife-spec is a knife plugin that automatically generates Chef cookbook specs (tests) stubs when you create a new cookbook with knife.
 
+## Deprecation Notice
+
+The functionality in this knife plugin has been incorporated into ChefDK in the chef generate cookbook command. Additionally the knife cookbook generate command has been deprecated and will be removed from a future Chef release.
+
 ## Installation
 
 Add this line to your cookbook's `Gemfile`:
