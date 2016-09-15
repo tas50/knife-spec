@@ -27,5 +27,5 @@ Gem::Specification.new do |spec|
   # Testing dependencies
   spec.add_development_dependency 'aruba', '~> 0.5'
   spec.add_development_dependency 'oj',    '~> 2.1'
-  spec.add_development_dependency 'rspec', '~> 2.14'
+  spec.add_development_dependency 'rspec', '~> 3'
 end
