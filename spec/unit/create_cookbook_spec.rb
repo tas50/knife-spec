@@ -7,14 +7,14 @@ describe Chef::Knife::CookbookCreate do
 
   before do
     # Do not run the existing cookbook_create commands
-    described_class.any_instance.stub(:old_run)
+    allow_any_instance_of(described_class).to receive(:old_run)
 
     # Setup the configuration
     knife.config = { cookbook_path: 'tmp/cookbooks' }
     knife.name_args = [name]
 
     # Tell knife to shutup
-    knife.stub(:msg)
+    allow(knife).to receive(:msg)
   end
 
   describe 'run' do
@@ -26,17 +26,17 @@ describe Chef::Knife::CookbookCreate do
     end
 
     it 'creates the specs directory' do
-      expect(File.directory?('tmp/cookbooks/myface/spec')).to be_true
+      expect(File.directory?('tmp/cookbooks/myface/spec')).to be_truthy
     end
 
     it 'creates the spec_helper' do
       path = File.join(spec_dir, 'spec_helper.rb')
-      expect(File.exists?(path)).to be_true
+      expect(File.exists?(path)).to be_truthy
     end
 
     it 'creates the default_spec' do
       path = File.join(spec_dir, 'recipes', 'default_spec.rb')
-      expect(File.exists?(path)).to be_true
+      expect(File.exists?(path)).to be_truthy
     end
   end
 end
